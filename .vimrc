@@ -1,3 +1,5 @@
+call pathogen#infect()
+
 syntax enable "Enable syntax highlighting
 set noexpandtab " Don't convert tabs to spaces
 set number
@@ -10,7 +12,12 @@ set smartindent " Enable smart-starting of indentation when starting a block
 set tabstop=8
 set shiftwidth=8
 set softtabstop=8
-filetype plugin on
+set tildeop " ~ can be used as an operator (invert case)
+filetype plugin indent on
+
+set wildignore+=*.o,.git,CMakeFiles,CMakeCache.txt
+
+let mapleader=","
 
 " Filetype autodetects
 au BufNewFile,BufRead *.cl setf opencl
@@ -22,12 +29,6 @@ if has('gui_running')
 endif
 
 " hotkey aliases
-:nmap <F9> :!make<lf>
+nmap <F9> :!make<lf>
 imap <C-V> <ESC><C-V>i
 vmap <C-C> "+y
-
-" SuperTab configuration
-let g:SuperTabDefaultCompletionType = "context"
-let g:SuperTabMappingForward = '<c-g>'
-let g:SuperTabMappingBackward = '<s-c-g>'
-let g:SuperTabMappingTabLiteral = '<tab>'

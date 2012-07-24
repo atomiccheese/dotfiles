@@ -1,0 +1,5 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhist_cnt =3
+let g:netrw_dirhist_1='/home/noahz/Workbench/tgame/shader-sbox/media/shaders'
+let g:netrw_dirhist_2='/home/noahz/.minecraft-normal/config'
+let g:netrw_dirhist_3='/home/noahz/Workbench/mcget/libmcget/CMakeFiles'

@@ -32,3 +32,6 @@ endif
 nmap <F9> :!make<lf>
 imap <C-V> <ESC><C-V>i
 vmap <C-C> "+y
+
+" path configuration
+let protodefprotogetter="$HOME/.vim/bundle/vim-protodef/pullproto.pl"

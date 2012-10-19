@@ -18,9 +18,10 @@ filetype plugin indent on
 set wildignore+=*.o,.git,CMakeFiles,CMakeCache.txt
 
 let mapleader=","
+let maplocalleader=";"
 
 " Filetype autodetects
-au BufNewFile,BufRead *.cl setf opencl
+autocmd BufNewFile,BufRead *.cl setf opencl
 
 " for gvim
 if has('gui_running')
@@ -29,9 +30,23 @@ if has('gui_running')
 endif
 
 " hotkey aliases
-nmap <F9> :!make<lf>
-imap <C-V> <ESC><C-V>i
-vmap <C-C> "+y
+nnoremap <F9> :!make<cr>
+inoremap <C-V> <ESC><C-V>i
+vnoremap <C-C> "+y
+
+" Maps o to have special functionality when in a c/c++ file with
+" a blank function with braces on the same line like this:
+" void foo() {}
+" to split the braces
+function mine:FixBraces()
+	if match(getline("."), '{\s*}') != -1
+		execute "normal! ^f{di}i\<cr>\<tab>\<cr>\<esc>k$"
+	else
+		execute "normal! o\<esc>"
+	endif
+endfunction
+
+autocmd FileType c,cpp nnoremap <buffer> <localleader>i :call mine:FixBraces()<cr>a
 
 " path configuration
 let protodefprotogetter="$HOME/.vim/bundle/vim-protodef/pullproto.pl"

@@ -197,11 +197,11 @@ function! protodef#ReturnSkeletonsFromPrototypesForCurrentBuffer(opts)
     " Get the prototypes from the header file
     let protos = s:GetFunctionPrototypesForCurrentBuffer(a:opts)
     let full = []
-	let companion = FSReturnReadableCompanionFilename('%')
-	let header_contents = ''
-	for line in readfile(companion)
-		let header_contents .= line
-	endfor
+    let companion = FSReturnReadableCompanionFilename('%')
+    let header_contents = ''
+    for line in readfile(companion)
+    	let header_contents .= line
+    endfor
     for proto in protos
         " Clean out the default arguments as these don't belong in the implementation file
         let params = matchstr(proto, '(\_.*$')

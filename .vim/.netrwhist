@@ -1,6 +1,7 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =4
-let g:netrw_dirhist_1='/home/noahz/Workbench/paradox/src/util/CMakeFiles'
-let g:netrw_dirhist_2='/home/noahz/Workbench/paradox/src/resources/CMakeFiles'
-let g:netrw_dirhist_3='/home/noahz/Workbench/pre-proto/src/config'
-let g:netrw_dirhist_4='/home/noahz/Workbench/mmget/build'
+let g:netrw_dirhist_cnt =5
+let g:netrw_dirhist_1='/home/noahz/Workbench/synapse/neuron/src/compiler/CMakeFiles'
+let g:netrw_dirhist_2='/home/noahz/Workbench/pyshard/system/supervisor'
+let g:netrw_dirhist_3='/home/noahz/Workbench/robocraft/reobf'
+let g:netrw_dirhist_4='/home/noahz/.local/lib/python3.3/site-packages/powerline'
+let g:netrw_dirhist_5='/home/noahz/dotfiles/.vim'

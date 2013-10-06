@@ -1,3 +1,4 @@
+set rtp+=~/.local/lib/python2.7/site-packages/powerline/bindings/vim
 call pathogen#infect()
 
 syntax enable "Enable syntax highlighting
@@ -16,6 +17,7 @@ set tildeop " ~ can be used as an operator (invert case)
 filetype plugin indent on
 
 set wildignore+=*.o,.git,CMakeFiles,CMakeCache.txt
+
 
 let mapleader=","
 let maplocalleader=";"

@@ -1,7 +1,10 @@
 syntax enable "Enable syntax highlighting
 set foldmethod=syntax
 set noexpandtab " Don't convert tabs to spaces
-set number
+if v:version > 703
+	set number
+endif
+set relativenumber
 set nuw=4
 set nocompatible " Don't act compatible with vi
 set incsearch " Enable incremental search

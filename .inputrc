@@ -1,0 +1,19 @@
+$include /etc/inputrc
+
+# Vi mode
+set editing-mode vi
+$if mode=vi
+
+set keymap vi-command
+# bindings for Vi mode
+"\e[A": history-search-backward
+"\e[B": history-search-forward
+"\ep": yank-last-arg
+Control-l: clear-screen
+
+set keymap vi-insert
+"\e[A": history-search-forward
+"\e[B": history-search-backward
+"\ep": yank-last-arg
+Control-l: clear-screen
+$endif

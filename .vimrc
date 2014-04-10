@@ -1,5 +1,6 @@
 syntax enable "Enable syntax highlighting
 set foldmethod=syntax
+set foldlevelstart=99
 set noexpandtab " Don't convert tabs to spaces
 if v:version > 703
 	set number
@@ -54,6 +55,7 @@ endif
 " hotkey aliases
 nnoremap <F9> :!make<cr>
 nnoremap <F5> :YcmForceCompileAndDiagnostics<cr>
+nnoremap <Space> :nohl<cr>
 
 " Maps o to have special functionality when in a c/c++ file with
 " a blank function with braces on the same line like this:
